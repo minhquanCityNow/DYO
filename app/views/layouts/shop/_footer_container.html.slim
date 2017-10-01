@@ -1,0 +1,89 @@
+.footer-container
+  #footer
+    .footer-center
+      .container
+        .row
+          .footer-static.row-fluid
+            .footer-block.col-xs-12.col-sm-6.col-md-3
+              .footer-block-logo
+                = image_tag "theme/logo.png"
+              p.footer-block-text Chúng tôi là ...
+              a.footer-block-box href="#" MUA NGAY
+            #recent_article_smart_blog_block_left.footer-block.blogModule.boxPlain.col-xs-12.col-sm-6.col-md-3
+              h4 BÀI VIẾT MỚI
+              .block_content.sdsbox-content.toggle-footer.bullet style=""
+                ul.recentArticles
+                  li
+                    a.image href="#" title=("Summer Entertaining")
+                      = image_tag "theme/6-home-small.jpg"
+                    a.title href="#" title=("Summer Entertaining")  Summer Entertaining
+                    span.info Nov 02, 2015
+            section#block_various_links_footer.footer-block.col-xs-12.col-sm-6.col-md-3
+              h4 THÔNG TIN
+              ul.toggle-footer.bullet style=""
+                li.item
+                  a href="#" title="Specials"  Đặt biệt
+                li.item
+                  a href="#" title=("New products")  Sản phẩm mới
+                li.item
+                  a href="#" title=("Best sellers")  Sản phẩm bán chạy nhất
+                li.item
+                  a href="#" title=("Contact us")  Liên hệ
+                li.item
+                  a href="#" title=("Terms of use")  Chính sách
+                li
+                  a href="#" title="Sitemap"  Sitemap
+            .footer-block.footer-newsletter.col-xs-12.col-sm-12.col-md-3
+              h4.title_font Nhận thông báo
+              .toggle-footer style=""
+                div
+                  p Nhận thông báo qua email
+                #newsletter_block_left
+                  .block_content
+                    form action="#" method="post"
+                      .form-group
+                        input#newsletter-input.inputNew.form-control.grey.newsletter-input name="email" size="18" type="text" value=("Your e-mail") /
+                        button.btn.btn-default.button.button-small.title_font name="submitNewsletter" type="submit"
+                        input name="action" type="hidden" value="0" /
+            #social_block.col-xs-12.col-sm-6.col-md-3
+              ul
+                li.facebook
+                  a._blank href="#" target="_blank"
+                    span Facebook
+                li.twitter
+                  a._blank href="#" target="_blank"
+                    span Twitter
+                li.rss
+                  a._blank href="#" target="_blank"
+                    span RSS
+                li.google-plus
+                  a._blank href="#" rel="publisher" target="_blank"
+                    span Google Plus
+                li.pinterest
+                  a._blank href="#" target="_blank"
+                    span Pinterest
+                li.instagram
+                  a._blank href="#" target="_blank"
+                    span Instagram
+    .footer-bottom
+      .container
+        .footer-static.row-fluid
+          .footerlinks.col-xs-12.col-sm-6.col-md-4
+            ul
+              li
+                a href="#"  Về chúng tôi
+              li
+                a href="#"  Blog
+              li
+                a href="#"  Liên hệ
+              li
+                a href="#"  FAQ
+
+          / .payment.col-xs-12.col-sm-6.col-md-4
+          /   = link_to "#" do
+          /     = image_tag "theme/payment_footer.png", class: "img-responsive", width: "220", height: "24"
+          .footer-address.col-xs-12.col-sm-6.col-md-4
+            p
+              | Copyright © 2015
+              a href="#"  The shop.
+              | All rights reserved.

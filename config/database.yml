@@ -1,0 +1,20 @@
+default: &default
+  adapter: <%= ENV['ADAPTER'] || 'mysql2' %>
+  encoding: utf8
+  username: root
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>
+  min_messages: log
+
+
+development:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] || 'dyo' %>_<%= Rails.env %>
+
+test:
+  <<: *default
+  database: <%= ENV['DATABASE_NAME'] || 'dyo' %>_<%= Rails.env %>
+
+production:
+  <<: *default
+  min_messages: notice

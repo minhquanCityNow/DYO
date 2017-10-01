@@ -1,0 +1,33 @@
+doctype html
+html.js.no-touch.mediaqueries data-sbro-ads-lock="true" data-sbro-deals-lock="true" data-sbro-extensions-lock="true" data-sbro-popup-lock="true" lang="en-us"
+  head
+    meta charset="utf-8" /
+    title rococo
+    meta content=("Shop powered by PrestaShop") name="description" /
+    meta content="PrestaShop" name="generator" /
+    meta content="index,follow" name="robots" /
+    meta content="width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0" name="viewport" /
+    meta content="yes" name="apple-mobile-web-app-capable" /
+    = stylesheet_link_tag    'shop/application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'shop/application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    css:
+      root #header + #content > #left > #rlblock_left {:
+          | display: none !important;
+      | }
+    css:
+      .fancybox-margin {
+          | margin-right: 0px;
+      | }
+
+body#index.index.hide-left-column.hide-right-column.lang_en.fullwidth data-gr-c-s-loaded="true" data=body_data class=body_css_class
+  div#page
+    = render "layouts/shop/header"
+    = render "layouts/shop/header_menu"
+    = render "layouts/shop/header_mobile_menu"
+    = yield
+    / = render "layouts/shop/brands_blocks_slider"
+    = render "layouts/shop/footer_container"
+  = render "layouts/shop/others"
+  = render "layouts/shop/js_loaded"
+  / = render "layouts/shop/colors_picker"

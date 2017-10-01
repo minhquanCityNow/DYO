@@ -1,0 +1,215 @@
+.header-container
+  header#header style=("margin-bottom: 0px;")
+    .nav
+      .container
+        .row
+          nav
+            #mobile_links
+              .current
+                span.cur-label Tài khoản của tôi
+              ul#header_links style=("display: block;")
+                li
+                  a.link-myaccount href="" title="Account"
+                    i.icon-user
+                    | Tài khoản
+                li
+                  a.link-wishlist.wishlist_block href="" title=("My wishlist")
+                    i.icon-heart
+                    | Yêu thích
+                li
+                  a.link-mycart href="" title=("My cart")
+                    i.icon-shopping-cart
+                    | Giỏ hàng của tôi
+                li.last
+                  a.link-login href="" rel="nofollow" title="Login"
+                    i.icon-lock
+                    | Đăng nhập
+            #languages-block-top.languages-block
+              .current
+                = image_tag "flags/vietnam.ico", alt: "en", width: "16"
+                span Tiếng Việt
+              ul#first-languages.languages-block_ul.toogle_content style=""
+                li.selected
+                  span
+                    = image_tag "flags/vietnam.ico", alt: "en", width: "16"
+                    span Tiếng Việt
+                li
+                  a href="#" hreflang="en" rel="alternate" title=("English")
+                    = image_tag "theme/1.jpg", alt: "fr", width: "16", height: "11"
+                    span English
+            #currencies-block-top
+              form#setCurrency action="#" method="post"
+                .current
+                  input#id_currency name="id_currency" type="hidden" value="" /
+                  input name="SubmitCurrency" type="hidden" value="" /
+                  span.cur-label
+                  strong VND
+                ul#first-currencies.currencies_ul.toogle_content style=""
+                  li.selected
+                    a href="javascript:setCurrency(1);" rel="nofollow" title=("Vietnam Dong (VND)") VND
+                  li
+                    a href="javascript:setCurrency(2);" rel="nofollow" title=("Dollar (USD)") USD
+            .welcome-text
+              p Xin chào, các bạn có thể đăng nhập hoạc đăng kí tài khoản!
+    .header_bottom
+      .container
+        .row
+          #header_logo.col-xs-12.col-sm-12.col-md-3
+            a href="#" title="rococo"
+              = image_tag "theme/logo.jpg", alt: "shop", width: "214", height: "61", class: "logo img-responsive"
+          .staticheader.col-xs-6.col-sm-4.col-md-3
+            = image_tag "theme/icon1.jpg"
+            .staticheaderbox
+              h2 HỖ TRỢ 24/7
+              span Từ A tới Z.
+          .staticheader.col-xs-6.col-sm-4.col-md-3
+            = image_tag "theme/icon2.jpg"
+            .staticheaderbox
+              h2 GIAO HÀNG
+              span Nhận giao hàng toàn quốc.
+          #sticky_top.col-xs-12.col-sm-12.col-md-3 style=""
+            .shopping_cart_menu
+              #cart_block_top.shopping_cart
+                a href="#" rel="nofollow" title=("Xem giỏ hàng của tôi")
+                  span.icon-shopping-cart.col-xs-12.col-sm-4.col-md-3
+                    i.fa.fa-shopping-cart.fa-lg
+                    span.unvisible
+                  span.boxcarttext
+                    span#shoppingcart Giỏ hàng
+                    span.boxcartitem
+                      span.ajax_cart_quantity.unvisible 0
+                      span.ajax_cart_product_txt.unvisible Sản phẩm
+                      span.ajax_cart_product_txt_s.unvisible Sản phẩm
+                      span.ajax_cart_total.unvisible
+                      span.ajax_cart_no_product (Trống)
+                .cart_block.block.exclusive
+                  .block_content
+                    .cart_block_list
+                      p.cart_block_no_products Không có sản phẩm
+                      .cart-prices
+                        .cart-prices-line.first-line
+                          span.price.cart_block_shipping_cost.ajax_cart_shipping_cost.unvisible Đã được xác nhận
+                          span.unvisible Đang vân chuyển
+                        .cart-prices-line.last-line
+                          span.price.cart_block_total.ajax_block_cart_total 0 VND
+                          span Tổng cộng
+                      p.cart-buttons
+                        a#button_order_cart.btn.btn-default.button.button-small href="#" rel="nofollow" title=("Thanh toán")
+                          span
+                            | Thanh toán
+                            i.icon-chevron-right.right
+            #layer_cart
+              .clearfix
+                .layer_cart_product.col-xs-12.col-md-6
+                  span.cross title=("Đóng lại")
+                  span.title
+                    i.icon-check
+                    | Sản phẩm đã được thêm vào giỏ hàng thành công!
+                  .product-image-container.layer_cart_img
+                  .layer_cart_product_info
+                    span#layer_cart_product_title.product-name
+                    span#layer_cart_product_attributes
+                    div
+                      strong.dark Số lượng
+                      span#layer_cart_product_quantity
+                    div
+                      strong.dark Tổng cộng
+                      span#layer_cart_product_price
+                .layer_cart_cart.col-xs-12.col-md-6
+                  span.title
+                    span.ajax_cart_product_txt_s.unvisible
+                      | Có
+                      span.ajax_cart_quantity 0
+                      | sản phẩm trong giỏ hàng của bạn.
+                    span.ajax_cart_product_txt Có 1 sản phẩm trong giỏ hàng của bạn.
+                  .layer_cart_row
+                    strong.dark Tổng cộng cho các sản phẩm
+                    span.ajax_block_products_total
+                  .layer_cart_row
+                    strong.dark.unvisible Tổng cộng tiền vận chuyển&nbsp;
+                    span.ajax_cart_shipping_cost.unvisible Đã được xá nhận.
+                  .layer_cart_row
+                    strong.dark Tổng cộng
+                    span.ajax_block_cart_total
+                  .button-container
+                    span.continue.btn.btn-default.button.exclusive-medium title=("Tiếp tục mua hàng")
+                      span
+                        i.icon-chevron-left.left
+                        | Tiếp tục mua hàng
+                    a.btn.btn-default.button.button-medium href="#" rel="nofollow" title=("Tiến hành kiểm tra")
+                      span
+                        | Tiến hành kiểm tra
+                        i.icon-chevron-right.right
+              .crossseling
+            .layer_cart_overlay
+            #search_block_top
+              .field-search
+                .fieldsearch-menu
+                  form#searchbox action="#" method="get"
+                    input name="controller" type="hidden" value="search" /
+                    .input-group-btn.search_filter
+                      select#category_filter name="category_filter"
+                        option selected="selected" value="0"  All Categories
+                        option value="2"  -- Home
+                        option value="12"  ---- Women
+                        option value="15"  ------ Accessories
+                        option value="21"  -------- Cocktail
+                        option value="22"  -------- Day
+                        option value="23"  -------- Evening
+                        option value="24"  -------- Sundresses
+                        option value="16"  ------ Dresses
+                        option value="25"  -------- Accessories
+                        option value="26"  -------- Hats and Gloves
+                        option value="27"  -------- Lifestyle
+                        option value="28"  -------- Bras
+                        option value="17"  ------ Top
+                        option value="59"  -------- Evening
+                        option value="60"  -------- Long Sleeved
+                        option value="61"  -------- Shrot Sleeved
+                        option value="62"  -------- Tanks and Camis
+                        option value="18"  ------ Handbags
+                        option value="29"  -------- Toter
+                        option value="30"  -------- Clutches
+                        option value="31"  -------- Satchels
+                        option value="32"  -------- Cross body
+                        option value="19"  ------ Shoes
+                        option value="20"  ------ Clothing
+                        option value="33"  -------- Coats &amp; Jackets
+                        option value="34"  -------- Blazers
+                        option value="35"  -------- Raincoats
+                        option value="36"  -------- Jackets
+                        option value="13"  ---- Men
+                        option value="38"  ------ Shoes
+                        option value="39"  ------ Bags
+                        option value="63"  ------ Glasses
+                        option value="64"  -------- Evening
+                        option value="65"  -------- Long Sleeved
+                        option value="66"  -------- Shrot Sleeved
+                        option value="67"  -------- Tanks and Camis
+                        option value="14"  ---- Fashion
+                        option value="44"  ------ Accessories
+                        option value="47"  -------- Watch Fashion
+                        option value="48"  -------- Bags Fashion
+                        option value="49"  -------- Lingerie
+                        option value="50"  -------- Shoes
+                        option value="45"  ------ Footwear
+                        option value="51"  -------- Rings
+                        option value="52"  -------- Bands
+                        option value="53"  -------- Diamond
+                        option value="54"  -------- Silver Bands
+                        option value="46"  ------ Kids fashion
+                        option value="55"  -------- Shoes
+                        option value="56"  -------- Casual Shoes
+                        option value="57"  -------- Spring and Autumn
+                        option value="58"  -------- Winter
+                        option value="78"  ---- FOOTWEAR
+                        option value="79"  ------ Custom
+                        option value="80"  -------- Platinum Bands
+                        option value="81"  -------- Gold Bands
+                        option value="82"  -------- Silver Bands
+                        option value="83"  -------- Silver Bands
+                    input name="orderby" type="hidden" value="position" /
+                    input name="orderway" type="hidden" value="desc" /
+                    input#search_query_top.search_query.form-control.ac_input autocomplete="off" name="search_query" type="text" value="Search..." /
+                    button.btn.button-search name="submit_search" type="submit"
+                      span.icon-search
